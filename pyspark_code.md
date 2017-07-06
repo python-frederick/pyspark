@@ -77,4 +77,4 @@ sqlContext.sql("select count(actor.id) from test").show()
 sqlContext.sql("select DISTINCT actor.login from test").show()
 ```
 
-Note number of results for all sqlContexts and compare to 1 month
+Note number of results for all sqlContexts and compare to 1 month. You should see approx. 12 times as many results.
