@@ -13,7 +13,7 @@ Besure to install Vagrant first (https://www.vagrantup.com/intro/getting-started
 
 > wget -P gz http://data.githubarchive.org/2016-01-01-{0..12}.json.gz
 
-> pyspark
+> [pyspark](https://github.com/python-frederick/pyspark/blob/master/pyspark_code.md#vagrant)
 
 
 #### EMR
@@ -42,7 +42,7 @@ Missing blocks (with replication factor 1): 0
 Live datanodes (20):
 ```
 
-> pyspark
+> [pyspark](https://github.com/python-frederick/pyspark/blob/master/pyspark_code.md#emr-20-nodes-1-month)
 
 Up cluster by a lot more nodes
 
@@ -63,4 +63,4 @@ Missing blocks (with replication factor 1): 0
 Live datanodes (40):
 ```
 
-> pyspark
+> [pyspark](https://github.com/python-frederick/pyspark/blob/master/pyspark_code.md#emr-20-nodes-1-year)
