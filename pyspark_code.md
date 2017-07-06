@@ -1,5 +1,6 @@
 ### Vagrant
 
+```python
 infolder = "gz/"
 
 rdd = sc.textFile(infolder)
@@ -30,11 +31,12 @@ pull_requests.count()
 pull_requests.registerTempTable("pullrequests")
 
 sqlContext.sql("select actor_id, repo_id from pullrequests").show()
-
+```
 
 ### EMR 20 nodes 1 month
 Total run time: 5 minutes
 
+```python
 infolder = "s3n://fredpy-pysparkdemo/2016/06/*/" # This bucket was created for this demo, you will need to setup a process to download the GHA files for this to work
 
 rdd = sc.textFile(infolder)
@@ -52,11 +54,12 @@ sqlContext.sql("select count(actor.id) from test").show()
 sqlContext.sql("select DISTINCT actor.login from test").show()
 
 Note number of results for all sqlContexts
-
+```
 
 ### EMR 20 nodes 1 year
 Total run time: 14 minutes
 
+```python
 infolder = "s3n://fredpy-pysparkdemo/2016/*/*/" # This bucket was created for this demo, you will need to setup a process to download the GHA files for this to work
 
 rdd = sc.textFile(infolder)
@@ -72,5 +75,6 @@ sqlContext.sql("select DISTINCT count(repo.url) from test where type = 'CreateEv
 sqlContext.sql("select count(actor.id) from test").show()
 
 sqlContext.sql("select DISTINCT actor.login from test").show()
+```
 
 Note number of results for all sqlContexts and compare to 1 month
