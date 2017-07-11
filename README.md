@@ -11,7 +11,7 @@ Besure to install Vagrant first (https://www.vagrantup.com/intro/getting-started
 
 > mkdir gz
 
-> wget -P gz http://data.githubarchive.org/2016-01-01-{0..12}.json.gz
+> wget -P gz http://data.githubarchive.org/2016-01-01-{0..5}.json.gz
 
 > [pyspark](https://github.com/python-frederick/pyspark/blob/master/pyspark_code.md#vagrant)
 
@@ -24,7 +24,7 @@ Wait 10 minutes for Master and Core to report "Running"
 
 > ssh-add key-name
 
-> ssh hadoop@ec2-hostname-reported-in-emr
+> ssh -A -C -D 3128 hadoop@ec2-hostname-reported-in-emr
 
 > hadoop dfsadmin -report
 ```
@@ -60,7 +60,7 @@ Missing blocks: 0
 Missing blocks (with replication factor 1): 0
 
 -------------------------------------------------
-Live datanodes (40):
+Live datanodes (50):
 ```
 
-> [pyspark](https://github.com/python-frederick/pyspark/blob/master/pyspark_code.md#emr-20-nodes-1-year)
+> [pyspark](https://github.com/python-frederick/pyspark/blob/master/pyspark_code.md#emr-50-nodes-1-year)

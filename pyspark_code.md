@@ -37,7 +37,7 @@ sqlContext.sql("select actor_id, repo_id from pullrequests").show()
 Total run time: 5 minutes
 
 ```python
-infolder = "s3n://fredpy-pysparkdemo/2016/06/*/" # This bucket was created for this demo, you will need to setup a process to download the GHA files for this to work
+infolder = "s3n://fredpy-pysparkdemo/06/*/" # This bucket was created for this demo, you will need to setup a process to download the GHA files for this to work
 
 rdd = sc.textFile(infolder)
 
@@ -56,11 +56,11 @@ sqlContext.sql("select DISTINCT actor.login from test").show()
 Note number of results for all sqlContexts
 ```
 
-### EMR 20 nodes 1 year
+### EMR 50 nodes 1 year
 Total run time: 14 minutes
 
 ```python
-infolder = "s3n://fredpy-pysparkdemo/2016/*/*/" # This bucket was created for this demo, you will need to setup a process to download the GHA files for this to work
+infolder = "s3n://fredpy-pysparkdemo/*/*/" # This bucket was created for this demo, you will need to setup a process to download the GHA files for this to work
 
 rdd = sc.textFile(infolder)
 

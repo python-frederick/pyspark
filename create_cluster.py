@@ -1,5 +1,6 @@
 # Creates EMR Cluster, be sure to update Ec2KeyName with your correct key
 import boto3
+import sys
 
 consent = raw_input("This may cost you are you sure you want to run this (Y/N)\n")
 if consent.startswith('y'):
@@ -8,7 +9,7 @@ if consent.startswith('y'):
         Name='GHA',
         ReleaseLabel="emr-5.5.0",
         Instances={
-            'Ec2KeyName': 'ec2key',
+            'Ec2KeyName': sys.argv[1],
             'KeepJobFlowAliveWhenNoSteps': True,
             'TerminationProtected': False,
             'InstanceGroups': [
